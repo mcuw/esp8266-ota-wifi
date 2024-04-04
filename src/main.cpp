@@ -1,5 +1,10 @@
 #include <Arduino.h>
-#include <ESP8266WiFi.h>
+#include "./cred.h"
+#include "./OTA.h"
+
+const char *ap_default_psk = AP_PSK; // Default PSK.
+
+OTA ota;
 
 void setup()
 {
@@ -7,10 +12,12 @@ void setup()
   while (!Serial)
   {
   }
+  Serial.println(F("\r\n"));
+
+  ota.begin(ap_default_psk);
 }
 
 void loop()
 {
-  Serial.println("Hello ESP8266");
-  delay(1000);
+  ota.handle();
 }
