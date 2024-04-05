@@ -18,17 +18,11 @@ https://github.com/esp8266/Arduino/blob/master/tools/sdk/ld/eagle.flash.4m3m.ld
 
 ## How to get the real flash informations
 
-Here is a scretch to check that you installed the flash successfully ...
+There is a scretch to check that you installed the flash successfully ...
+For that uncomment `src_dir` in `platformio.ini`
 
-```
-  uint32_t realSize = ESP.getFlashChipRealSize();
-  uint32_t ideSize = ESP.getFlashChipSize();
-  FlashMode_t ideMode = ESP.getFlashChipMode();
-
-  Serial.printf("Flash real id:   %08X\n", ESP.getFlashChipId());
-  Serial.printf("Flash real size: %u bytes\n\n", realSize);
-  Serial.printf("Flash ide  size: %u bytes\n", ideSize);
-  Serial.printf("Flash ide speed: %u Hz\n", ESP.getFlashChipSpeed());
+```ini
+src_dir = ./examples/real-memory
 ```
 
 ## Why should you want to use OTA?
