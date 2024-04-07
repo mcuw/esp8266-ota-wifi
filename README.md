@@ -53,11 +53,10 @@ How to debug? If you are only connected with WiFi then you can connect with teln
 telnet 192.168.4.1
 ```
 
-For write `q` then press `enter`.
+For exit telnet write `q` to exit then press `enter`.
 
-```sh
-telnet> close
-```
+For reset ESP write `r` then press `enter`.
+
 
 ## Links
 
