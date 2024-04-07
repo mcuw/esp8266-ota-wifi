@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include "./cred.h"
-#include "./OTA.h"
+#include "./credentials.h"
+#include <OTA.h>
 
 const char *ap_default_psk = AP_PSK; // Default PSK.
 

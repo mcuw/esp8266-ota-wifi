@@ -42,7 +42,21 @@ cp upload_params_example.ini upload_params.ini
 ```
 
 ```sh
-cp src/cred_example.h src/cred.h
+cp src/credentials_example.h src/credentials.h
+```
+
+## Telnet to debug OTA
+
+How to debug? If you are only connected with WiFi then you can connect with telnet, e.g. call
+
+```sh
+telnet 192.168.4.1
+```
+
+For write `q` then press `enter`.
+
+```sh
+telnet> close
 ```
 
 ## Links
